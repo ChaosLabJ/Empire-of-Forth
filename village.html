@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empire of Forth</title>
+        <link rel="shortcut icon" href="CJ-Logo.png">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="author" content="Reimann, Jan Lupus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="background-div"></div>
+        <div id="sidebar-border"></div>
+        <div id="sidebar">
+            <a class="sidebarElement" href="map.html"><img class="sidebarElement" src="map-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="base.html"><img class="sidebarElement" src="base-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="village.html"><img class="sidebarElement" src="village-icon.png" style="width:100px;height:100px;"></a>
+        </div>
+        <img src="village_background.png" class="combat_background">
+        <img src="charaN.png" id="characterPreviewBase">
+        <img id="shop" onclick="toggleShop()" src="shop-button.png" style="width:137px;height:166px;">
+        <div id="shop-menu">
+            <table class="stock">
+                <tr>
+                    <th>Shop: </th>
+                </tr>
+                <tr>
+                    <td>Gp:</td>
+                    <td id="gpDisplay">0</td>
+                </tr>
+                <tr>
+                    <td><img title="Potion of Healing" src="heal-potion-icon.png" style="height:30px;width:30px;"></td>
+                    <td>10gp</td>
+                    <td><button id="healPot" class="buyButton" onclick="buy(this.id)" id="">+</button></td>
+                </tr>
+                <tr>
+                    <td><img title="Oil of Sharpening" src="sharp-oil-icon.png" style="height:30px;width:30px;"></td>
+                    <td>50gp</td>
+                    <td><button id="sharpOil" class="buyButton" onclick="buy(this.id)" id="">+</button></td>
+                </tr>
+                <tr>
+                    <td><img title="Experience in a Bottle" src="xp-potion-icon.png" style="height:30px;width:30px;"></td>
+                    <td>30gp</td>
+                    <td><button id="xpPot" class="buyButton" onclick="buy(this.id)" id="">+</button></td>
+                </tr>
+            </table>
+        </div>
+        <footer><small>&copy; Copyright 2022, ChaosLabJ</small></footer> 
+    </body>
+    <script src="shop.js"></script>
+</html>

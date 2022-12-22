@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Empire of Forth</title>
+        <link rel="shortcut icon" href="CJ-Logo.png">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="author" content="Reimann, Jan Lupus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="sidebar-border"></div>
+        <div id="sidebar">
+            <a class="sidebarElement" href=""><img class="sidebarElement" src="map-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="base.html"><img class="sidebarElement" src="base-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="village.html"><img class="sidebarElement" src="village-icon.png" style="width:100px;height:100px;"></a>
+        </div>
+        <div id="tutorial">
+            <h2>Empire of Forth v.1.0</h2>
+            <p id="tutOne"></p>
+            <p id="tutTwo"></p>
+            <p>
+                If you want to practise your fighting with the experience you gathered out in the wild, you can teleport here at any moment while you aren't under attack.
+                You also got yourself a second teleport-crystal to teleport to the smaller village that is living near camp, but the crystal isn't connected yet.
+            </p>
+            <p>
+                <table id="tutTable">
+                    <tr>
+                        <th>Item</th>
+                        <th>Full name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>ATK</td>
+                        <td>Attack</td>
+                        <td>This describes your physical force. It determines your damage, but also how much you get affected by healing potions.</td>
+                    </tr>
+                    <tr>
+                        <td>DEF</td>
+                        <td>Defence</td>
+                        <td>This determines your ability to block attacks. After blocking an opponents attack your next attack will be a little stronger.</td>
+                    </tr>
+                    <tr>
+                        <td>HP</td>
+                        <td>Hitpoints</td>
+                        <td>This is your physical ability to stay alive. Don't let it reach zero, or else you won't be no more.</td>
+                    </tr>
+                    <tr>
+                        <td>XP</td>
+                        <td>Experience points</td>
+                        <td>As the name suggests, this is the experience you gained on your adventure. It determines when you can increase one of your stats.</td>
+                    </tr>
+                    <tr>
+                        <td>AP</td>
+                        <td>Ability points</td>
+                        <td>Sounds similiar to XP, doesn't it? This number determines how much you can increase one of your other stats. You gain one after each level up</td>
+                    </tr>
+                    <tr>
+                        <td>GP</td>
+                        <td>Gold pieces</td>
+                        <td>Rather simple, innit? These are your coins you have in your purse. I heard you can get rid of some gold in a village nearby, if you want to.</td>
+                    </tr>
+                </table>
+            </p>
+            <p>
+                Now go. You got an empire to save, don't you?
+            </p>
+            <a href="map.html"><button class="creaButtons" style="font-size:150%;margin:-2.5%0%0%50%;position:fixed;"> --> </button></a>
+        </div>
+        <footer><small>&copy; Copyright 2022, ChaosLabJ</small> </footer> 
+    </body>
+    <script>
+        name = localStorage.getItem("charan");
+        if(localStorage.getItem("charag") == "f"){
+            charaTitle = "Empress";
+            pronoun = "her";
+        }else if(localStorage.getItem("charag") == "m"){
+            charaTitle = "Emperor";
+            pronoun = "his";
+        }else{
+            charaTitle = "Ruler";
+            pronoun = "their";
+        }
+
+        document.getElementById("tutOne").innerHTML = `A long, long time ago and also never there lived a young ${charaTitle}. ${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} name was ${name}.
+            Their Empire was of average size, but the place was rather deserted. Reason being the monsters that dwell around the land, making it very dangerous to live there.
+            So the ${charaTitle} made ${pronoun} way to ${pronoun} land to find the source of these creatures, destroy it and finally build up their Empire.`
+        document.getElementById("tutTwo").innerHTML = `This ${charaTitle} was you. You had just set up your camp right in the middle of your future Empire. On your way here, you got attacked by a giant rat, 
+                but you managed to fight it off. You got your sword and feel prepared for your adventure.`
+    </script>
+</html>

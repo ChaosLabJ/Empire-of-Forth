@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Empire of Forth</title>
+        <link rel="shortcut icon" href="CJ-Logo.png">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="author" content="Reimann, Jan Lupus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <img src="mushrooms_background.png" class="combat_background">
+        <img src="" id="character_combat">
+        <img src="fairy.png" id="monster">
+        <div onclick="dialog()" id="dialogBox">
+            <p id="dialog"></p>
+        </div>
+        <footer><small>&copy; Copyright 2022, ChaosLabJ</small></footer> 
+    </body>
+    <script>
+        name = localStorage.getItem("charan");
+        if(localStorage.getItem("charag") == "f"){
+            charaTitle = "Empress";
+            pronoun = "her";
+        }else if(localStorage.getItem("charag") == "m"){
+            charaTitle = "Emperor";
+            pronoun = "his";
+        }else{
+            charaTitle = "Ruler of an Empire";
+            pronoun = "their";
+        }
+
+        function dialog(){
+            console.log(localStorage.getItem("fairy"));
+
+            if(localStorage.getItem("fairy") == null || localStorage.getItem("fairy") == "null"){
+                localStorage.setItem("fairy", 0);
+            }
+            fW = localStorage.getItem("fairy");
+
+            if(fW == 0){
+                document.getElementById("dialog").innerHTML = `Greetings ${charaTitle}, I was already wondering when you would show up.`;
+                localStorage.setItem("fairy", 1);
+            }else if(fW == 1){
+                document.getElementById("dialog").innerHTML = `Oh don't worry about the monsters. This place is enchanted so that nobody who isn't permitted to can enter.`;
+                localStorage.setItem("fairy", 2);
+            }else if(fW == 2){
+                document.getElementById("dialog").innerHTML = `But my power is limited and I won't be able to hold up this protective spell for a long time anymore.`;
+                localStorage.setItem("fairy", 3);
+            }else if(fW == 3){
+                document.getElementById("dialog").innerHTML = `The village and neighboring cities are in great danger. Please ${charaTitle}, you have to do something.`;
+                localStorage.setItem("fairy", 4);
+            }else if(fW == 4){
+                document.getElementById("dialog").innerHTML = `I found the source of these monsters. It's the powerful fairy-dragon living in this land.`;
+                localStorage.setItem("fairy", 5);
+            }else if(fW == 5){
+                document.getElementById("dialog").innerHTML = `He creates these monsters to hold the humans at bay.`;
+                localStorage.setItem("fairy", 8);
+            }else if(fW == 7){
+                document.getElementById("dialog").innerHTML = `The dragon is situated on the small island over there.`;
+                localStorage.setItem("fairy", 8);
+            }else if(fW == 8){
+                document.getElementById("dialog").innerHTML = `I will teleport you over there, once you feel ready.`;
+                localStorage.setItem("fairy", 9);
+                location.replace("map.html");
+            }else if(fW >= 9){
+                document.getElementById("dialog").innerHTML = `Do you want to be teleported to the island? If not please don't waist my time. I got spells to cast.`;
+            }
+        }
+        </script>
+</html>

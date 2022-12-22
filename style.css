@@ -1,0 +1,410 @@
+html, body {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+}
+
+body{
+    background-image: url("parchment-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: bisque;
+    font-family: "LetterOMatic!";
+}
+
+#background-div {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: blur(3px);
+    width: 100vw;
+    height: 100vh;
+}
+
+#alertFullScreen{
+    text-align: center;
+    margin-right: 50%;
+    margin-left: 37%;
+    margin-bottom: 50%;
+    margin-top: 25%;
+    font-family: "LetterOMatic!";
+    color: black;
+    font-size: 420%;
+    z-index: 69;
+    background-color: transparent;
+    border: none;
+}
+
+#alertFullScreen:hover{
+    color: rebeccapurple;
+}
+
+#sidebar-border{
+    margin: -5% 0% 0% 84.5%;
+    position: static;
+    border-left: 2px solid rgba(29, 23, 12, 0.863);
+    height: 100vh;
+    position: fixed;
+}
+
+#sidebar{
+    margin: 5% 0% 0% 85.5%;
+    position: fixed;
+}
+
+.sidebarElement{
+    transition: 0.4s;
+    margin-top: 15%;
+    margin-right: 20%;
+}
+
+.sidebarElement:hover{
+    transform: scale(110%);
+}
+
+#creationMenu{
+    text-align: center;
+    margin-top: 0%;
+}
+
+.creaTexts{
+    font-size: 120%;
+}
+
+.creaInputs{
+    font-family: "LetterOMatic!";
+    background-color: transparent;
+    border: transparent;
+    border-block-end: solid black 2px;
+}
+
+.creaButtons{
+    transition: 0.1s;
+    font-family: "LetterOMatic!";
+    background-color: transparent;
+    border: none;
+}
+
+.creaButtons:hover{
+    transform: scale(110%);
+    color: #663399;
+    margin: -0.0125%;
+}
+
+#genderInputDiv{
+    border-radius: 10%;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border-block-end: 2px solid black;
+}
+
+.gender{
+    opacity: 0.25;
+}
+
+.gender:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+#characterPreview{
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 5%;
+}
+
+#tutorial{
+    width: 50%;
+    font-size: 110%;
+    margin: 0% 0% 0% 15%;
+}
+
+#tutTable{
+    padding: 2.5% 5% 5% 5%;
+}
+
+#PreviewMap{
+    position: fixed;
+    margin: 30% 0% 0% 87%;
+}
+
+#characternamePreview{
+    margin: -5% 0% 0% 5%;
+    font-size: 150%;
+}
+
+area:hover{
+    cursor:help;
+}
+
+#posMarker{
+    position: fixed;
+    width: 1%;
+}
+
+#characterPreviewBase{
+    width: 20%;
+    position: fixed;
+    z-index: 5;
+    margin: 30% 0% 0% -70%;
+}
+
+#statButton{
+    width: 10%;
+    height: 20%;
+    margin: 40% 0% 0% -15%;
+    z-index: 69;
+    position: fixed;
+    transition: 0.4s;
+}
+
+#statButton:hover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    background-image: url("stat-button-active.png");
+}
+
+#stats{
+    z-index: 69;
+    position: absolute;
+    width: 10%;
+    margin: -35% 0% 0% 40%;
+    background-image: url("div_background_image.png");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    filter:drop-shadow(2px);
+}
+
+.statItem{
+    padding: 25% 0% 15% 25%;
+}
+
+.statIncreaseButton{
+    margin: -0.75% 0% 0% 0%;
+    position: fixed;
+    background-color: transparent;
+    font-size: 150%;
+    border: none;
+    filter:contrast(150%);
+}
+
+.statIncreaseButton:hover{
+    filter:brightness(150%);
+    color: rebeccapurple;
+    cursor: pointer;
+}
+
+.combat_background{
+    margin-left: -1%;
+    margin-top: 11%;
+    margin-bottom: -1%;
+    width: 80%;
+    margin-right: -10%;
+}
+
+#monster{
+    transition: 0.4s;
+    position: absolute;
+    margin-left: -10%;
+    width: 10%;
+    margin-top: 30%;
+}
+
+#monster:hover{
+    cursor: pointer;
+    transform: scale(105%);
+}
+
+#character_combat{
+    position: absolute;
+    margin-left: -50%;
+    margin-top: 30%;
+    width: 10%;
+}
+
+#lootChest{
+    transition: 0.4s;
+    position: fixed;
+    z-index: 69;
+    margin: -10% 0% -5% 0%;
+}
+
+#lootListText{
+    font-size: 170%;
+    margin: 0% 0% 0% -5%;
+    text-decoration: underline;
+}
+
+.lootList{
+    z-index: 69;
+    position: fixed;
+    margin: -40% 0% 0% 40%;
+    padding: 2.5% 2.5% 0% 2.5%;
+    background-image: url("div_background_image.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.lootListItem{
+    z-index: 69;
+    margin: 10% 0% 0% 0%;
+}
+
+#combatButtonsDiv{
+    text-align: center;
+    margin: -10% 0% 0% 0%;
+    z-index: 13;
+    padding: 0%;
+}
+
+.combatButtons{
+    position: relative;
+    text-align: center;
+    transition: 0.25s;
+    margin: 0% 7.5% 0% 0%;
+    padding: 0%;
+    z-index: 13;
+    font-size: 175%;
+    font-family: "LetterOMatic!";
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.combatButtons:hover{
+    color: #663399;
+    transform: scale(110%);
+}
+
+#playerHealthDisplay{
+    position: fixed;
+    color:#663399;
+    margin-left: 21.25%;
+    margin-top: -1.25%;
+    font-size: 150%;
+}
+
+#enemyHealthDisplay{
+    position: fixed;
+    color:#663399;
+    font-size: 150%;
+    margin-left: 60.75%;
+}
+
+.combatItems{
+    transition: 0.25s;
+}
+
+.combatItems:hover{
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+#itemListDiv{
+    position: fixed;
+    margin: -40% 0% 0% 40%;
+    background-image: url("div_background_image.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0% 2.5% 0% 0%;
+    z-index: 69;
+}
+
+#itemList{
+    padding: 25% 0% 15% 20%;
+}
+
+#shop{
+    width: 137px;
+    height: 166px;
+    margin: 45% 0% 0% -25%;
+    z-index: 69;
+    position: fixed;
+}
+
+#shop:hover{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: cover;
+    background-image: url("shop-button-active.png");
+}
+
+#shop-menu{
+    z-index: 69;
+    position: absolute;
+    width: 10%;
+    margin: -30% 0% 0% 40%;
+    background-image: url("div_background_image.png");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    filter:drop-shadow(2px);
+}
+
+.stock{
+    padding: 25% 25% 5% 20%;
+}
+
+.buyButton{
+    background-color: transparent;
+    font-size: 150%;
+    border: none;
+    filter:contrast(150%);
+}
+
+.buyButton:hover{
+    filter:brightness(150%);
+    color: rebeccapurple;
+    cursor: pointer;
+}
+
+#dialogBox{
+    position: fixed;
+    width:100%;
+    height: 15%;
+    margin: -10% 0% 0% -10%;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    filter:drop-shadow(2px);
+}
+
+#dialog{
+    padding: 0% 5% 5% 15%;
+    color: #663399;
+    font-size: 200%;
+    filter: brightness(120%);
+}
+
+#end{
+    width: 50%;
+    font-size: 110%;
+    margin: 0% 0% 0% 15%;
+}
+
+#credits{
+    width: 50%;
+    font-size: 80%;
+    margin: 5% 0% 0% 25%;
+    text-align: center;
+}
+
+#dcLink{
+    text-decoration: none;
+    color: black;
+    transition: 0.4s;
+}
+
+#dcLink:hover{
+    color: #663399;
+    transform: scale(110%);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: block;
+}

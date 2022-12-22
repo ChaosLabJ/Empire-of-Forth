@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empire of Forth</title>
+        <link rel="shortcut icon" href="CJ-Logo.png">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="author" content="Reimann, Jan Lupus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="background-div"></div>
+        <div id="sidebar-border"></div>
+        <div id="sidebar">
+            <a class="sidebarElement" href="map.html"><img class="sidebarElement" src="map-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="base.html"><img class="sidebarElement" src="base-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="village.html"><img class="sidebarElement" src="village-icon.png" style="width:100px;height:100px;"></a>
+        </div>
+        <img src="base_background.png" class="combat_background">
+        <img src="charaN.png" id="characterPreviewBase">
+        <img src="stat-button.png" id="statButton" onclick="toggleStats()" style="width:192px;height:172.8px;">
+        <div id="stats">
+            <table class="statItem">
+                <tr>
+                    <th>Stats: </th>
+                </tr>
+                <tr>
+                    <td>ap:</td>
+                    <td id="apDisplay">0</td>
+                </tr>
+                <tr>
+                    <td>def:</td>
+                    <td id="defDisplay">0</td>
+                    <td><button onclick="increaseDef()" class="statIncreaseButton" id="defIncrease">+</button></td>
+                </tr>
+                <tr>
+                    <td>atk:</td>
+                    <td id="atkDisplay">3</td>
+                    <td><button onclick="increaseAtk()" class="statIncreaseButton" id="atkIncrease">+</button></td>
+                </tr>
+                <tr>
+                    <td>hp:</td>
+                    <td id="hpDisplay">10</td>
+                    <td><button onclick="increaseHp()" class="statIncreaseButton" id="hpIncrease">+</button></td>
+                </tr>
+            </table>
+        </div>
+        <footer><small>&copy; Copyright 2022, ChaosLabJ</small></footer> 
+    </body>
+    <script src="stats.js"></script>
+</html>

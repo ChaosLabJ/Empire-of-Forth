@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Empire of Forth</title>
+        <link rel="shortcut icon" href="CJ-Logo.png">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="author" content="Reimann, Jan Lupus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="background-div"><button id="alertFullScreen" onclick="openFullScreen()">Enter fullscreen</button></div>
+        <div id="sidebar-border"></div>
+        <div id="sidebar">
+            <a class="sidebarElement" href=""><img class="sidebarElement" src="map-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="base.html"><img class="sidebarElement" src="base-icon.png" style="width:100px;height:100px;"></a>
+            <a class="sidebarElement" href="village.html"><img class="sidebarElement" src="village-icon.png" style="width:100px;height:100px;"></a>
+        </div>
+        <div id="creationMenu">
+            <p class="creaTexts" id="citynameText">Give your city a name</p>
+                <input class="creaInputs" id="cityname" type="text" placeholder="Darmstadt">
+            <p class="creaTexts" id="characternameText">Give your character a name</p>
+                <input class="creaInputs" id="charactername" type="text" placeholder="Björn Hamburger">
+            <p class="creaTexts" id="charactergenderText">What is your characters gender?</p>
+                <div id="genderInputDiv" onclick="setCharacterPreview()">
+                    <p id="genderMarkerText" class="creaTexts" >F M N</p>
+                    <input id="genderF" type="checkbox" class="gender">
+                    <input id="genderM" type="checkbox" class="gender">
+                    <input id="genderN" type="checkbox" class="gender" checked="true">
+                </div>
+            <p class="creaTexts" id="switchLgText">Switch language</p>
+                <button class="creaButtons" id="lg" onclick="changeLg()" class="language">DE</button>
+                <p class="creaTexts" id="startText">Click to start</p>
+                <a href="tutorial.html"><button id="submitButton" class="creaButtons" onclick="setInitials()">Start</button></a>
+        </div>
+        <img id="characterPreview" src="charaN.png" alt="characterPreview" style="width:184px;height:352px">
+        <button onclick="helloWorld()" style="visibility:hidden;">hey</button>
+        <footer><small>&copy; Copyright 2022, ChaosLabJ</small></footer> 
+    </body>
+    <script src="main.js"></script>
+</html>

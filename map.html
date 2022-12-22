@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Empire of Forth</title>
+        <link rel="shortcut icon" href="CJ-Logo.png">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="author" content="Reimann, Jan Lupus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="background-div"><button id="alertFullScreen" onclick="openFullScreen()">Enter fullscreen</button></div>
+        <div id="sidebar-border"></div>
+        <div id="sidebar">
+            <a class="sidebarElement" href="map.html"><img class="sidebarElement" src="map-icon.png" style="width:100px;height:100px;"></a>
+            <a onclick="basePos()" class="sidebarElement" href="base.html"><img class="sidebarElement" src="base-icon.png" style="width:100px;height:100px;"></a>
+            <a onclick="vilPos()" class="sidebarElement" href="village.html"><img class="sidebarElement" src="village-icon.png" style="width:100px;height:100px;"></a>
+        </div>
+        <img style="position:fixed;margin-top:0%;width:1623px;height:1055px;" id="mapOfDoom" src="imagemap-trans.png" usemap="#map">
+        <map name="map">
+            <area onclick="changeLocation(this.id)" id="base" coords="718,480,716,462,702,462,706,480,696,495,682,496,682,523,687,532,698,555,702,565,716,565,733,563,752,565,765,529,771,516,769,499,758,493,753,466,739,460,735,483" shape="poly">
+            <area onclick="changeLocation(this.id)" id="forest_path" coords="540,793,44" shape="circle">
+            <area onclick="changeLocation(this.id)" id="mine_path" coords="492,115,44" shape="circle">
+            <area onclick="changeLocation(this.id)" id="mountain_path" coords="332,302,33" shape="circle">
+            <area onclick="changeLocation(this.id)" id="mushrooms" coords="1439,44,110" shape="circle">
+            <area onclick="changeLocation(this.id)" id="village" coords="1379,926,104" shape="circle">
+            <area onclick="changeLocation(this.id)" id="swamp_path" coords="986,575,46" shape="circle">
+            <area onclick="changeLocation(this.id)" id="swamp" coords="1056,780,79" shape="circle">
+            <area onclick="changeLocation(this.id)" id="forest" coords="299,940,50" shape="circle">
+            <area onclick="changeLocation(this.id)" id="small_isle" coords="1268,302,43" shape="circle">
+            <area onclick="changeLocation(this.id)" id="mountain" coords="125,334,32" shape="circle">
+            <area onclick="changeLocation(this.id)" id="mine" coords="140,44,38" shape="circle">
+            <area onclick="changeLocation(this.id)" id="bridge" coords="1052,211,1020,219,1017,239,1034,255,1066,257,1086,232,1194,159,1214,165,1241,125,1225,99,1186,86,1182,122" shape="poly">
+            <area onclick="changeLocation(this.id)" id="forest_clearing" coords="277,530,96" shape="circle">
+            <area onclick="changeLocation(this.id)" id="flowers" coords="756,198,71" shape="circle">
+        </map>
+        <img id="posMarker" src="posMarker.png">
+        <div id="PreviewMap">
+            <p id="gpDisplayMap">gp</p>
+            <p id="hpDisplayMap">hp</p>
+            <p id="xpDisplayMap">xp</p>
+            <img id="characterPreviewMap" src="charaN.PNG" style="width:184px;height:352px;">
+            <p id="characternamePreview">charactername</p>
+        </div>
+        <footer><small>&copy; Copyright 2022, ChaosLabJ</small> </footer> 
+    </body>
+    <script src="map.js"></script>
+</html>

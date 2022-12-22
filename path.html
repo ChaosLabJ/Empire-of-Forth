@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Empire of Forth</title>
+        <link rel="shortcut icon" href="CJ-Logo.png">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="author" content="Reimann, Jan Lupus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="background-div"></div>
+        <img src="path_background.png" class="combat_background">
+        <img src="" id="character_combat">
+        <img onclick="target()" src="giant_rat.png" id="monster">
+        <img onclick="toggleLoot()" src="chest.png" id="lootChest">
+        <div id="itemListDiv">
+            <table id="itemList">
+                <tr>
+                    <th>Items: </th>
+                </tr>
+                <tr>
+                    <td><img class="combatItems" id="healPot" onclick="use(this.id)" title="Potion of Healing" src="heal-potion-icon.png" style="height:30px;width:30px;"></td>
+                    <td id="quanthealPot">0</td>
+                </tr>
+                <tr>
+                    <td><img class="combatItems" id="sharpOil" onclick="use(this.id)" title="Oil of Sharpening" src="sharp-oil-icon.png" style="height:30px;width:30px;"></td>
+                    <td id="quantsharpOil">0</td>
+                </tr>
+            </table>
+        </div>
+        <div class="lootList">
+            <ul>
+                <p id="lootListText">You gained: </p>
+                <li class="lootListItem" id="xpLoot">Xp</li>
+                <li class="lootListItem" id="goldLoot">Gold</li>
+                <li class="lootListItem" id="itemLoot">Items</li>
+            </ul>
+        </div>
+        <div id="combatButtonsDiv">
+            <button class="combatButtons" id="attack" onclick="attack()">Attack</button>
+            <button class="combatButtons" id="block" onclick="block()">Block</button>
+            <button class="combatButtons" id="item" onclick="useItem()">Item</button>
+        </div>
+        <div id="playerHealthDisplay">
+            <p id="hpDisplay"></p>
+            <p></p>
+        </div>
+        <div id="enemyHealthDisplay">
+            <p id="hpDisplayEnim"></p>
+            <p></p>
+        </div>
+        <footer><small>&copy; Copyright 2022, ChaosLabJ</small></footer> 
+    </body>
+    <script src="combat.js"></script>
+</html>
